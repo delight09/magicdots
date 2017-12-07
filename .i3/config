@@ -53,10 +53,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Shift+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+Shift+f fullscreen
@@ -108,7 +108,7 @@ bindsym $mod+Tab workspace back_and_forth
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: remote
 bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3: ttc
+bindsym $mod+Shift+3 move container to workspace 3: server
 bindsym $mod+Shift+4 move container to workspace 4: mail
 bindsym $mod+Shift+5 move container to workspace 5: time
 bindsym $mod+Shift+6 move container to workspace 6
@@ -217,7 +217,7 @@ bindsym $MOD+SHIFT+Return exec urxvt
 bindsym $MOD+Shift+w exec mychrome
 bindsym $MOD+Shift+l exec myi3lock
 bindsym $MOD+Shift+c exec xsel -o -p | xsel -i -b
-bindsym $MOD+Shift+v exec xdotool click 2
+bindsym $MOD+Shift+p exec xdotool click 2
 bindsym --release Print exec import /tmp/screenshot.png
 bindsym $mod+Return exec st -f "MesloLGLDZ-Regular:pixelsize=18:antialias=true"
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -236,3 +236,5 @@ exec --no-startup-id dualduel.sh single
 # exec --no-startup-id st
 exec --no-startup-id danny_in_terminal
 exec --no-startup-id mychrome
+# Fix Caps Lock
+exec --no-startup-id setxkbmap -option ctrl:nocaps
