@@ -1,4 +1,4 @@
-export PATH=~/.gem/ruby/2.4.0/bin:$PATH
+export PATH=~/.gem/ruby/2.5.0/bin:$PATH
 export ZSH=~/.oh-my-zsh
 
 # Theme
