@@ -214,25 +214,23 @@ workspace_auto_back_and_forth yes  #I'd like to switch
 ## KEY BINDINGS
 # bindsym $MOD+SHIFT+f exec thunar
 bindsym $MOD+SHIFT+Return exec urxvt
-bindsym $MOD+Shift+w exec mychrome
-bindsym $MOD+Shift+l exec myi3lock
-bindsym $MOD+Shift+c exec xsel -o -p | xsel -i -b
-bindsym $MOD+Shift+p exec xdotool click 2
+bindsym XF86Launch4 exec mye
 bindsym --release Print exec import /tmp/screenshot.png
-bindsym $mod+Return exec st -f "MesloLGLDZ-Regular:pixelsize=18:antialias=true"
+bindsym XF86ScreenSaver exec myi3lock
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym $MOD+Shift+c exec xsel -o -p | xsel -i -b
+bindsym $MOD+Shift+p exec xdotool click 2
+bindsym $mod+Return exec st -f "MesloLGLDZ-Regular:pixelsize=18:antialias=true"
 bindsym $mod+Shift+x [urgent=latest] focus
-# bindsym $mod+Shift+l exec /usr/local/bin/have_a_shift.sh
 
 ## bootstrap working layout
 exec --no-startup-id wmname LG3D
-exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id helper_x11vnc.sh
 exec --no-startup-id dualduel.sh single
+# exec --no-startup-id helper_x11vnc.sh
 # exec --no-startup-id libreoffice
 # exec --no-startup-id feh --bg-max ~/archive/Pictures/Wallpapers/ruby_heroku.png
-#exec --no-startup-id xcompmgr
+# exec --no-startup-id xcompmgr
 # exec --no-startup-id st
 exec --no-startup-id danny_in_terminal
 exec --no-startup-id mychrome
